@@ -1,0 +1,127 @@
+import { Image, Notes } from "mdx-deck"
+import { syntaxHighlighterPrism } from "mdx-deck/themes"
+import { Split } from "mdx-deck/layouts"
+
+import customTheme from "./theme"
+export const themes = [customTheme, syntaxHighlighterPrism]
+
+## Typage de bout en bout avec TypeScript et GraphQL
+
+Meetup GraphQL Paris
+
+Juillet 2019
+
+---
+
+## Me 🤓
+
+<Split>
+
+```json
+{
+  me {
+    name
+    job
+    company {
+      name
+      website
+    }
+    networks {
+      name
+      url
+    }
+  }
+}
+```
+
+<div style={{ marginLeft: 50, width: "15em" }}>
+
+```json
+{
+  "me": {
+    "name": "Thibault Lenclos 🎸🚴‍",
+    "job": "Développeur React+Native",
+    "company": {
+      "name": "Premier Octet",
+      "website": "https://premieroctet.com"
+    },
+    "networks": [
+      {
+        "name": "Twitter",
+        "url": "https://twitter.com/thibz"
+      },
+      {
+        "name": "Github",
+        "url": "https:/github.com/tlenclos"
+      }
+    ]
+  }
+}
+```
+
+</div>
+
+</Split>
+
+---
+
+## Premier Octet
+
+![Premier Octet](assets/premieroctet.png)
+
+---
+
+## Pourquoi typer son application
+
+- 📚 Documentation "automatique" du code
+- ✅ Détecter les erreurs
+- ⛑ Se sentir en sécurité, confiant
+- 😌 Écrire moins de test
+
+---
+
+## Comment typer en JavaScript
+
+- Flow ou TypeScript
+- Ajoute une nouvelle étape de compilation
+- Typage statique (!= runtime)
+
+---
+
+## TypeScript
+
+```bash
+yarn global add typescript
+
+touch index.ts
+
+tsc -w index.ts
+```
+
+---
+
+## TypeScript: exemple
+
+```ts
+type Speaker = {
+  name: string
+  job?: string
+  hasCat?: bool
+}
+
+const user: Speaker = {
+  name: "Thibault Lenclos",
+  job: "Web & mobile developer"
+}
+```
+
+---
+
+## GraphQL ? 💉 de rappel
+
+- API typée avec un schéma
+- Indépendant de la base de donnée
+- On récupère l'information via des "Query"
+- On met à jour via des "Mutation"
+
+---

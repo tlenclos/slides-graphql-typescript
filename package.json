@@ -1,0 +1,21 @@
+{
+  "name": "formation-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mdx",
+  "scripts": {
+    "start": "mdx-deck index.mdx",
+    "static": "mkdir -p dist && cp -R assets dist/",
+    "build": "yarn static && mdx-deck build index.mdx --no-html"
+  },
+  "dependencies": {
+    "code-surfer": "https://github.com/pomber/code-surfer#code-surfer-v2",
+    "mdx-deck": "^2.4.0",
+    "prism-theme-night-owl": "^1.2.0",
+    "react-syntax-highlighter": "^11.0.1",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "raw-loader": "^3.0.0"
+  }
+}
