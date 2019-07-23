@@ -1,6 +1,7 @@
 import { Image, Notes } from "mdx-deck"
 import { syntaxHighlighterPrism } from "mdx-deck/themes"
 import { Split } from "mdx-deck/layouts"
+import { TwitterTweetEmbed } from "react-twitter-embed"
 
 import customTheme from "./theme"
 export const themes = [customTheme, syntaxHighlighterPrism]
@@ -256,7 +257,25 @@ test.ts:10:3 - error TS2322: Type '{ name: string; job: string; location: string
 
 ---
 
-## Démo
+## Inconvénients
+
+<TwitterTweetEmbed tweetId={"1153628808152592384"} />
+
+Peut ralentir voir devenir bloquant.
+
+---
+
+## 🕺🏼
+
+`any` a la rescousse.
+
+```ts
+const veryComplexStuffAndImDoneForToday: any = await fetch(url);
+```
+
+---
+
+## Projet démo
 
 - Serveur Node.js
   - GraphQL avec Apollo Server
@@ -518,7 +537,7 @@ export default () => {
 
 ## Résumons
 
-- ♻️ Modification du schéma ===  mise à jour des types pour le serveur et le client
+- ♻️ Modification du schéma === mise à jour des types pour le serveur et le client
 - ⚠️ Le serpent peut se mordre la queue, le type `any` peut vous sauver
 - 💅 Une incompatiblité entre le schéma GraphQL et son utilisation front cassera le build !
 
