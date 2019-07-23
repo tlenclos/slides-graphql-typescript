@@ -38,7 +38,7 @@ export default {
   colors: {
     text: "black",
     background: "white",
-    link: "#5057f2",
+    link: "black",
     code: "grey"
   },
   Slide: {
