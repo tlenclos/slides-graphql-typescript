@@ -113,22 +113,6 @@ Fortemment typé ! Pas de type générique "object".
 
 ---
 
-## GraphQL: Resolvers
-
-```js
-function Query_me(request) {
-  return request.auth.user
-}
-
-function User_name(user) {
-  return user.getName()
-}
-```
-
-Fonctions responsables de résoudre les champs de votre schéma.
-
----
-
 ## GraphQL: Query
 
 ➡ Query
@@ -150,6 +134,22 @@ Fonctions responsables de résoudre les champs de votre schéma.
   }
 }
 ```
+
+---
+
+## GraphQL: Resolvers
+
+```js
+function Query_me(request) {
+  return request.auth.user
+}
+
+function User_name(user) {
+  return user.getName()
+}
+```
+
+Fonctions responsables de résoudre les champs de votre schéma.
 
 ---
 
@@ -189,7 +189,7 @@ La validation du type est automatique par le serveur.
 
 ## TypeScript ?
 
-![TypeScript](assets/typescript.png)
+<img src="assets/typescript.png" style={{ width: "80% "}} />
 
 (almost) no more undefined.
 
@@ -537,7 +537,7 @@ export default () => {
 
 ## Résumons
 
-- ♻️ Modification du schéma === mise à jour des types pour le serveur et le client
+- ♻️ Modification du schéma -> mise à jour des types pour le serveur et le client
 - ⚠️ Le serpent peut se mordre la queue, le type `any` peut vous sauver
 - 💅 Une incompatiblité entre le schéma GraphQL et son utilisation front cassera le build !
 
